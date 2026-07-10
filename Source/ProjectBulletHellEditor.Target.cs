@@ -1,14 +1,15 @@
+// Copyright Epic Games, Inc. All Rights Reserved.
+
 using UnrealBuildTool;
 using System.Collections.Generic;
 
 public class ProjectBulletHellEditorTarget : TargetRules
 {
-	public ProjectBulletHellEditorTarget(TargetInfo Target) : base(Target)
+	public ProjectBulletHellEditorTarget( TargetInfo Target) : base(Target)
 	{
 		Type = TargetType.Editor;
-		DefaultBuildSettings = BuildSettingsVersion.Latest;
-		IncludeOrderVersion = EngineIncludeOrderVersion.Latest;
-
-		ExtraModuleNames.AddRange(new string[] { "ProjectBulletHell" });
+		DefaultBuildSettings = BuildSettingsVersion.V7;
+		IncludeOrderVersion = EngineIncludeOrderVersion.Unreal5_8;
+		ExtraModuleNames.Add("ProjectBulletHell");
 	}
 }

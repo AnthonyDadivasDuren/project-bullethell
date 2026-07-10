@@ -1,3 +1,5 @@
+// Copyright Epic Games, Inc. All Rights Reserved.
+
 using UnrealBuildTool;
 
 public class ProjectBulletHell : ModuleRules
@@ -5,39 +7,17 @@ public class ProjectBulletHell : ModuleRules
 	public ProjectBulletHell(ReadOnlyTargetRules Target) : base(Target)
 	{
 		PCHUsage = PCHUsageMode.UseExplicitOrSharedPCHs;
+	
+		PublicDependencyModuleNames.AddRange(new string[] { "Core", "CoreUObject", "Engine", "InputCore", "EnhancedInput", "GameplayTags", "GameplayTasks" });
 
-		PublicDependencyModuleNames.AddRange(new string[]
-		{
-			"Core",
-			"CoreUObject",
-			"Engine",
-			"InputCore",
-			"EnhancedInput",
+		PrivateDependencyModuleNames.AddRange(new string[] {  });
 
-			// Gameplay Ability System
-			"GameplayAbilities",
-			"GameplayTags",
-			"GameplayTasks"
-		});
+		// Uncomment if you are using Slate UI
+		// PrivateDependencyModuleNames.AddRange(new string[] { "Slate", "SlateCore" });
+		
+		// Uncomment if you are using online features
+		// PrivateDependencyModuleNames.Add("OnlineSubsystem");
 
-		PrivateDependencyModuleNames.AddRange(new string[]
-		{
-			"Slate",
-			"SlateCore"
-		});
-
-		// Uncomment if/when online subsystem or networking replication features are added.
-		// PrivateDependencyModuleNames.Add("NetCore");
-
-		PublicIncludePaths.AddRange(new string[]
-		{
-			"ProjectBulletHell",
-			"ProjectBulletHell/Core",
-			"ProjectBulletHell/Player",
-			"ProjectBulletHell/Abilities",
-			"ProjectBulletHell/Weapons",
-			"ProjectBulletHell/Movement",
-			"ProjectBulletHell/UI"
-		});
+		// To include OnlineSubsystemSteam, add it to the plugins section in your uproject file with the Enabled attribute set to true
 	}
 }

@@ -1,13 +1,75 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="8d51b6d3-0f85-4b8d-b7c3-b5121129fce5" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.ProjectBulletHell.dir/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ProjectBulletHell.dir/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.ProjectBulletHell.dir/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Config/DefaultEngine.ini" beforeDir="false" afterPath="$PROJECT_DIR$/Config/DefaultEngine.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Config/DefaultGame.ini" beforeDir="false" afterPath="$PROJECT_DIR$/Config/DefaultGame.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/_Game/Abilities/.gitkeep" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/_Game/Audio/.gitkeep" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/_Game/Levels/Greybox/.gitkeep" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/_Game/Levels/Greybox/L_Greybox_Test.umap" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/_Game/Player/.gitkeep" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/_Game/UI/.gitkeep" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/_Game/VFX/.gitkeep" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/_Game/Weapons/.gitkeep" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectBulletHell.slnx" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectBulletHell.slnx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectBulletHell.uproject" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectBulletHell.uproject" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/ProjectBulletHell.Target.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Source/ProjectBulletHell.Target.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/ProjectBulletHell/Player/PBHPlayerCharacter.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/ProjectBulletHell/Player/PBHPlayerCharacter.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/ProjectBulletHell/ProjectBulletHell.Build.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Source/ProjectBulletHell/ProjectBulletHell.Build.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/ProjectBulletHell/ProjectBulletHell.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/ProjectBulletHell/ProjectBulletHell.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/ProjectBulletHell/ProjectBulletHell.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/ProjectBulletHell/ProjectBulletHell.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/ProjectBulletHellEditor.Target.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Source/ProjectBulletHellEditor.Target.cs" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="Toolset" />
+  </component>
   <component name="ProjectColorInfo"><![CDATA[{
+  "customColor": "",
   "associatedIndex": 7
 }]]></component>
-  <component name="ProjectId" id="3GJXQRcr1RioNNhSfLmFHh5eupA" />
+  <component name="ProjectId" id="3GJaPc5jhHbnCnet39vGSk8RbRg" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "do_not_show_solution_notification": "true",
+    "git-widget-placeholder": "main",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="8d51b6d3-0f85-4b8d-b7c3-b5121129fce5" name="Changes" comment="" />
+      <created>1783692104911</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1783692104911</updated>
+      <workItem from="1783692108776" duration="142000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>

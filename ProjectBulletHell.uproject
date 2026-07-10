@@ -2,15 +2,12 @@
 	"FileVersion": 3,
 	"EngineAssociation": "5.8",
 	"Category": "",
-	"Description": "Bullet hell action game - Returnal / Kill Knight inspired. Player-focused vertical slice.",
+	"Description": "Bullet hell action game",
 	"Modules": [
 		{
 			"Name": "ProjectBulletHell",
 			"Type": "Runtime",
-			"LoadingPhase": "Default",
-			"AdditionalDependencies": [
-				"Engine"
-			]
+			"LoadingPhase": "Default"
 		}
 	],
 	"Plugins": [
