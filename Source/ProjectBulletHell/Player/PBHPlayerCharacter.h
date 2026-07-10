@@ -25,7 +25,7 @@ public:
 protected:
 	virtual void BeginPlay() override;
 	
-	// --- Enhanched Input ---
+	// --- Enhanced Input ---
 	UPROPERTY(EditDefaultsOnly, Category = "PBH|Input")
 	TObjectPtr<UInputMappingContext> DefaultMappingContext;
 	
