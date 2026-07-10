@@ -1,28 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="8d51b6d3-0f85-4b8d-b7c3-b5121129fce5" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.ProjectBulletHell.dir/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ProjectBulletHell.dir/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.ProjectBulletHell.dir/.idea/workspace.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Config/DefaultEngine.ini" beforeDir="false" afterPath="$PROJECT_DIR$/Config/DefaultEngine.ini" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Config/DefaultGame.ini" beforeDir="false" afterPath="$PROJECT_DIR$/Config/DefaultGame.ini" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/_Game/Abilities/.gitkeep" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/_Game/Audio/.gitkeep" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/_Game/Levels/Greybox/.gitkeep" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/_Game/Levels/Greybox/L_Greybox_Test.umap" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/_Game/Player/.gitkeep" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/_Game/UI/.gitkeep" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/_Game/VFX/.gitkeep" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/_Game/Weapons/.gitkeep" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.ProjectBulletHell.dir/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ProjectBulletHell.dir/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Automation_ProjectBulletHell.slnx" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectBulletHell.slnx" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectBulletHell.slnx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectBulletHell.uproject" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectBulletHell.uproject" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/ProjectBulletHell.Target.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Source/ProjectBulletHell.Target.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/ProjectBulletHell/Player/PBHPlayerCharacter.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/ProjectBulletHell/Player/PBHPlayerCharacter.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/ProjectBulletHell/ProjectBulletHell.Build.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Source/ProjectBulletHell/ProjectBulletHell.Build.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/ProjectBulletHell/ProjectBulletHell.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/ProjectBulletHell/ProjectBulletHell.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/ProjectBulletHell/ProjectBulletHell.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/ProjectBulletHell/ProjectBulletHell.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/ProjectBulletHellEditor.Target.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Source/ProjectBulletHellEditor.Target.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,6 +18,11 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Source/ProjectBulletHell/Player/PBHPlayerCharacter.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Source/ProjectBulletHell/Player/PBHPlayerCharacter.h" root0="SKIP_HIGHLIGHTING" />
+  </component>
+  <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="ProblemsViewState">
     <option name="selectedTabId" value="Toolset" />
   </component>
@@ -52,6 +43,11 @@
     "RunOnceActivity.typescript.service.memoryLimit.init": "true",
     "do_not_show_solution_notification": "true",
     "git-widget-placeholder": "main",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -62,13 +58,14 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1783692104911</updated>
-      <workItem from="1783692108776" duration="142000" />
+      <workItem from="1783692108776" duration="1167000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="UnityCheckinConfiguration" checkUnsavedScenes="true" />
   <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
