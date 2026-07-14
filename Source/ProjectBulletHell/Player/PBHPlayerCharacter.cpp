@@ -60,10 +60,19 @@ void APBHPlayerCharacter::Input_Move(const FInputActionValue& Value)
 
 void APBHPlayerCharacter::Input_Look(const FInputActionValue& Value)
 {
+	const FVector2D LookInput = Value.Get<FVector2D>();
+
+	AddControllerYawInput(LookInput.X);
+	AddControllerPitchInput(LookInput.Y);
 }
 
 void APBHPlayerCharacter::Input_Dash(const FInputActionValue& Value)
 {
+}
+
+void APBHPlayerCharacter::Input_Jump(const FInputActionValue& Value)
+{
+	// works with built in  will build custom later on
 }
 
 void APBHPlayerCharacter::Input_Fire(const FInputActionValue& Value)
@@ -101,6 +110,12 @@ void APBHPlayerCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInput
 	if (DashAction)
 	{
 		EIC->BindAction(DashAction, ETriggerEvent::Started, this, &APBHPlayerCharacter::Input_Dash);
+	}
+	
+	if (JumpAction)
+	{
+		EIC->BindAction(JumpAction, ETriggerEvent::Started, this, &ACharacter::Jump);
+		EIC->BindAction(JumpAction, ETriggerEvent::Completed, this, &ACharacter::StopJumping);
 	}
 
 	if (FireAction)

@@ -37,13 +37,19 @@ protected:
 
 	UPROPERTY(EditDefaultsOnly, Category = "PBH|Input")
 	TObjectPtr<UInputAction> DashAction;
-
+	
+	UPROPERTY(EditDefaultsOnly, Category = "PBH|Input")
+	TObjectPtr<UInputAction> JumpAction;
+	
 	UPROPERTY(EditDefaultsOnly, Category = "PBH|Input")
 	TObjectPtr<UInputAction> FireAction;
+	
+	
 	
 	void Input_Move(const FInputActionValue& Value);
 	void Input_Look(const FInputActionValue& Value);
 	void Input_Dash(const FInputActionValue& Value);
+	void Input_Jump(const FInputActionValue& Value); // works with built in  will build custom later on
 	void Input_Fire(const FInputActionValue& Value);
 	void Input_FireReleased(const FInputActionValue& Value);
 	
