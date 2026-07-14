@@ -7,6 +7,7 @@
 #include "PBHPlayerState.h"
 #include "../Abilities/PBHAbilitySystemComponent.h"
 #include "../Abilities/PBHGameplayAbility.h"
+#include "../Abilities/PBHAttributeSet.h"
 
 
 APBHPlayerCharacter::APBHPlayerCharacter()
@@ -121,6 +122,8 @@ void APBHPlayerCharacter::InitAbilityActorInfo()
 			}
 		}
 	}
+	
+	GetWorldTimerManager().SetTimer(DashRegenTimerHandle, this, &APBHPlayerCharacter::RegenDashCharge, DashRegenInterval, true);
 }
 
 void APBHPlayerCharacter::Input_Move(const FInputActionValue& Value)
@@ -148,6 +151,12 @@ void APBHPlayerCharacter::Input_Look(const FInputActionValue& Value)
 
 void APBHPlayerCharacter::Input_Dash(const FInputActionValue& Value)
 {
+	if (CachedASC)
+	{
+		CachedASC->ActivateAbilityByTag(FGameplayTag::RequestGameplayTag(FName("Ability.Dash")));
+		UE_LOG(LogTemp, Warning, TEXT("Dash Activated"));
+	}
+
 }
 
 void APBHPlayerCharacter::Input_Jump(const FInputActionValue& Value)
@@ -161,6 +170,16 @@ void APBHPlayerCharacter::Input_Fire(const FInputActionValue& Value)
 
 void APBHPlayerCharacter::Input_FireReleased(const FInputActionValue& Value)
 {
+}
+
+void APBHPlayerCharacter::RegenDashCharge()
+{
+	if (!CachedASC) { return; }
+
+	UPBHAttributeSet* AttributeSet = const_cast<UPBHAttributeSet*>(CachedASC->GetSet<UPBHAttributeSet>());
+	if (!AttributeSet) { return; }
+
+	AttributeSet->SetDashCharges(FMath::Min(AttributeSet->GetDashCharges() + 1.0f, AttributeSet->GetMaxDashCharges()));
 }
 
 void APBHPlayerCharacter::Tick(float DeltaTime)

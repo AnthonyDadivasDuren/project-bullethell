@@ -62,6 +62,15 @@ protected:
 	void Input_Jump(const FInputActionValue& Value); // works with built-in, will build custom later on
 	void Input_Fire(const FInputActionValue& Value);
 	void Input_FireReleased(const FInputActionValue& Value);
+	
+	// --- Dash Regen --- 
+	UPROPERTY(EditDefaultsOnly, Category = "PBH|Abilities")
+	float DashRegenInterval = 3.0;
+	
+	void RegenDashCharge();
+	
+	FTimerHandle DashRegenTimerHandle;
+
 
 private:
 	// --- Camera ---

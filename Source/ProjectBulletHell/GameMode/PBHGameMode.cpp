@@ -1,9 +1,15 @@
-// Fill out your copyright notice in the Description page of Project Settings.
-
-#include "ProjectBulletHell/Player/PBHPlayerCharacter.h"
 #include "PBHGameMode.h"
+#include "../Player/PBHPlayerState.h"
+#include "ProjectBulletHell/Player/PBHPlayerCharacter.h"
+
 
 APBHGameMode::APBHGameMode()
 {
 	DefaultPawnClass = APBHPlayerCharacter::StaticClass();
+	PlayerStateClass = APBHPlayerState::StaticClass();
+	
+	// Add these if/when you build the corresponding classes:
+	// PlayerControllerClass = APBHPlayerController::StaticClass();
+	// HUDClass = APBHHUD::StaticClass();
+	// GameStateClass = APBHGameState::StaticClass();
 }
