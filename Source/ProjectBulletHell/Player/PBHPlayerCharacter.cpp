@@ -1,10 +1,10 @@
 #include "PBHPlayerCharacter.h"
-
 #include "Camera/CameraComponent.h"
 #include "GameFramework/CharacterMovementComponent.h"
 #include "GameFramework/SpringArmComponent.h"
 #include "EnhancedInputSubsystems.h"
 #include "EnhancedInputComponent.h"
+
 
 APBHPlayerCharacter::APBHPlayerCharacter()
 {
@@ -72,7 +72,7 @@ void APBHPlayerCharacter::Input_Dash(const FInputActionValue& Value)
 
 void APBHPlayerCharacter::Input_Jump(const FInputActionValue& Value)
 {
-	// works with built in  will build custom later on
+	// works with built-in  will build custom later on
 }
 
 void APBHPlayerCharacter::Input_Fire(const FInputActionValue& Value)
