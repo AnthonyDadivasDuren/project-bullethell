@@ -1,7 +1,7 @@
 #pragma once
 
 #include "CoreMinimal.h"
-#include "GameFramework/Character.h"
+#include "ProjectBulletHell/Core/PBHCharacterBase.h"
 #include "PBHPlayerCharacter.generated.h"
 
 class UCameraComponent;
@@ -11,7 +11,7 @@ class UInputAction;
 struct FInputActionValue;
 
 UCLASS()
-class PROJECTBULLETHELL_API APBHPlayerCharacter : public ACharacter
+class PROJECTBULLETHELL_API APBHPlayerCharacter : public APBHCharacterBase
 {
 	GENERATED_BODY()
 
