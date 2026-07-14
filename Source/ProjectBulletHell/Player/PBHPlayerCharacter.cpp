@@ -4,6 +4,9 @@
 #include "GameFramework/SpringArmComponent.h"
 #include "EnhancedInputSubsystems.h"
 #include "EnhancedInputComponent.h"
+#include "PBHPlayerState.h"
+#include "../Abilities/PBHAbilitySystemComponent.h"
+#include "../Abilities/PBHGameplayAbility.h"
 
 
 APBHPlayerCharacter::APBHPlayerCharacter()
@@ -41,6 +44,83 @@ void APBHPlayerCharacter::BeginPlay()
 	
 	Subsystem->AddMappingContext(DefaultMappingContext, 0);
 	
+}
+
+void APBHPlayerCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
+{
+	Super::SetupPlayerInputComponent(PlayerInputComponent);
+
+	UEnhancedInputComponent* EIC = Cast<UEnhancedInputComponent>(PlayerInputComponent);
+
+	if (!EIC) { return; }
+
+	if (MoveAction)
+	{
+		EIC->BindAction(MoveAction, ETriggerEvent::Triggered, this, &APBHPlayerCharacter::Input_Move);
+	}
+
+	if (LookAction)
+	{
+		EIC->BindAction(LookAction, ETriggerEvent::Triggered, this, &APBHPlayerCharacter::Input_Look);
+	}
+
+	if (DashAction)
+	{
+		EIC->BindAction(DashAction, ETriggerEvent::Started, this, &APBHPlayerCharacter::Input_Dash);
+	}
+	
+	if (JumpAction)
+	{
+		EIC->BindAction(JumpAction, ETriggerEvent::Started, this, &ACharacter::Jump);
+		EIC->BindAction(JumpAction, ETriggerEvent::Completed, this, &ACharacter::StopJumping);
+	}
+
+	if (FireAction)
+	{
+		EIC->BindAction(FireAction, ETriggerEvent::Started, this, &APBHPlayerCharacter::Input_Fire);
+		EIC->BindAction(FireAction, ETriggerEvent::Completed, this, &APBHPlayerCharacter::Input_FireReleased);
+	}
+}
+
+
+UAbilitySystemComponent* APBHPlayerCharacter::GetAbilitySystemComponent() const
+{
+	return CachedASC;
+}
+
+void APBHPlayerCharacter::PossessedBy(AController* NewController)
+{
+	Super::PossessedBy(NewController);
+	InitAbilityActorInfo();
+}
+
+void APBHPlayerCharacter::OnRep_PlayerState()
+{
+	Super::OnRep_PlayerState();
+	InitAbilityActorInfo();
+}
+
+void APBHPlayerCharacter::InitAbilityActorInfo()
+{
+	APBHPlayerState* PS = GetPlayerState<APBHPlayerState>();
+	if (!PS) { return; }
+	
+	UAbilitySystemComponent* ASC = PS->GetAbilitySystemComponent();
+	if (!ASC) { return; }
+	
+	ASC->InitAbilityActorInfo(PS, this);
+	CachedASC = Cast<UPBHAbilitySystemComponent>(ASC);
+	
+	if (HasAuthority())
+	{
+		for (const TSubclassOf<UPBHGameplayAbility>& AbilityClass : StartingAbilities)
+		{
+			if (AbilityClass)
+			{
+				ASC->GiveAbility(FGameplayAbilitySpec(AbilityClass, 1, INDEX_NONE, this));
+			}
+		}
+	}
 }
 
 void APBHPlayerCharacter::Input_Move(const FInputActionValue& Value)
@@ -88,40 +168,3 @@ void APBHPlayerCharacter::Tick(float DeltaTime)
 	Super::Tick(DeltaTime);
 
 }
-
-void APBHPlayerCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
-{
-	Super::SetupPlayerInputComponent(PlayerInputComponent);
-
-	UEnhancedInputComponent* EIC = Cast<UEnhancedInputComponent>(PlayerInputComponent);
-
-	if (!EIC) { return; }
-
-	if (MoveAction)
-	{
-		EIC->BindAction(MoveAction, ETriggerEvent::Triggered, this, &APBHPlayerCharacter::Input_Move);
-	}
-
-	if (LookAction)
-	{
-		EIC->BindAction(LookAction, ETriggerEvent::Triggered, this, &APBHPlayerCharacter::Input_Look);
-	}
-
-	if (DashAction)
-	{
-		EIC->BindAction(DashAction, ETriggerEvent::Started, this, &APBHPlayerCharacter::Input_Dash);
-	}
-	
-	if (JumpAction)
-	{
-		EIC->BindAction(JumpAction, ETriggerEvent::Started, this, &ACharacter::Jump);
-		EIC->BindAction(JumpAction, ETriggerEvent::Completed, this, &ACharacter::StopJumping);
-	}
-
-	if (FireAction)
-	{
-		EIC->BindAction(FireAction, ETriggerEvent::Started, this, &APBHPlayerCharacter::Input_Fire);
-		EIC->BindAction(FireAction, ETriggerEvent::Completed, this, &APBHPlayerCharacter::Input_FireReleased);
-	}
-}
-
